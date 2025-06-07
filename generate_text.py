@@ -21,8 +21,8 @@ def generate_text(prompt: str) -> str:
         model="o4-mini",
         messages=[
             {"role": "system", "content": (
-                "You are a helpful assistant. Please provide a clear, direct answer to the user's question. "
-                "Always respond with actual content, never with an empty response."
+                "あなたは親切で知識豊富なアシスタントです。ユーザーの質問に対して明確で分かりやすい回答を提供してください。"
+                "常に具体的な内容を含む回答をし、空の応答は絶対に返さないでください。"
             )},
             {"role": "user", "content": prompt}
         ],
