@@ -13,7 +13,7 @@ A simple Python utility that uses OpenAI’s GPT-4 ChatCompletion API to generat
 1. Ensure Python 3.7+ is installed.
 2. Install dependencies:
    ```bash
-   pip install openai==0.28.0
+   pip install --upgrade openai
    ```
 3. (Optional) Add local scripts to your PATH:
    ```bash
