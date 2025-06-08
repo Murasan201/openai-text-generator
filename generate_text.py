@@ -17,7 +17,7 @@ def generate_text(prompt: str) -> str:
     Returns:
         str: モデルからの生成テキスト
     """
-    response = openai.ChatCompletion.create(
+    response = openai.chat.completions.create(
         model="o4-mini",
         messages=[
             {"role": "system", "content": (
@@ -29,9 +29,9 @@ def generate_text(prompt: str) -> str:
         max_completion_tokens=1000,
     )
     # デバッグ用ログを出力（必要に応じてコメントアウト）
-    # print("DEBUG:", response)
+    print("DEBUG:", response)
     # 生成されたテキストを返却
-    content = response.choices[0].message.get("content", "")
+    content = response.choices[0].message.content
     if not content:
         return "応答が生成されませんでした。再度お試しください。"
     return content.strip()
